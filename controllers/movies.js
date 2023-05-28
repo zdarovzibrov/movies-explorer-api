@@ -5,7 +5,7 @@ const ForbiddenError = require('../errors/forbidden');
 const Movie = require('../models/movie');
 
 const getOwnMovie = (req, res, next) => {
-  Movie.find({owner: req.user._id})
+  Movie.find({ owner: req.user._id })
     .then((movie) => {
       if (!movie) {
         throw new NotFoundError('Фильмы не найдены.');
@@ -38,7 +38,7 @@ const deleteMovie = (req, res, next) => {
         throw new ForbiddenError('Нет прав на удаление этого фильма.');
       } else {
         return Movie.deleteOne({ _id: req.params.moviesId })
-          .then((data) => { res.status(201).send(data)});
+          .then((data) => { res.status(201).send(data); });
       }
     })
     .catch((err) => {

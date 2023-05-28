@@ -73,8 +73,7 @@ const getUserById = (req, res, next) => {
       return res.send(user);
     })
     .catch(next);
-
-}
+};
 
 const editProfile = (req, res, next) => {
   const { name, email } = req.body;
@@ -96,7 +95,6 @@ const editProfile = (req, res, next) => {
       }
     });
 };
-
 
 module.exports = {
   getUserById,
