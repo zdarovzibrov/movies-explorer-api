@@ -1,13 +1,11 @@
 const allowedCors = [
-  'http://hellomesto.nomoredomains.monster',
-  'https://hellomesto.nomoredomains.monster',
-  'http://api.hellomesto.nomoredomains.monster',
-  'https://api.hellomesto.nomoredomains.monster',
+  'http://zibrovmovies.diplom.nomoredomains.rocks',
+  'https://zibrovmovies.diplom.nomoredomains.rocks',
+  'http://api.zibrovmovies.diplom.nomoredomains.rocks',
+  'https://api.zibrovmovies.diplom.nomoredomains.rocks',
   'localhost:3000',
   'http://localhost:3000',
-  'https://localhost:3000',
-  'localhost:3001',
-  'http://localhost:3001',
+  'https://localhost:3000'
 ];
 
 const DEFAULT_ALLOWED_METHODS = 'GET, HEAD, PUT, PATCH, POST, DELETE';

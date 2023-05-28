@@ -33,7 +33,7 @@ const movieShema = new mongoose.Schema(
       required: true,
       validate: {
         validator: (value) => REGEXP.test(value),
-        message: 'Ваша ссылка невалидна'
+        message: 'Ваша ссылка невалидна.'
       },
     },
 
@@ -42,7 +42,7 @@ const movieShema = new mongoose.Schema(
       required: true,
       validate: {
         validator: (value) => REGEXP.test(value),
-        message: 'Ваша ссылка невалидна'
+        message: 'Ваша ссылка невалидна.'
       },
     },
 
@@ -51,7 +51,7 @@ const movieShema = new mongoose.Schema(
       required: true,
       validate: {
         validator: (value) => REGEXP.test(value),
-        message: 'Ваша ссылка невалидна'
+        message: 'Ваша ссылка невалидна.'
       },
     },
 
