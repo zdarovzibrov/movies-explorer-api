@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const { default: isEmail } = require('validator/lib/isEmail');
-const { REGEXP } = require('../utils/constants');
 
 const userShema = new mongoose.Schema({
   email: {

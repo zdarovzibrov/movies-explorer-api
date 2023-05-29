@@ -38,7 +38,7 @@ const deleteMovie = (req, res, next) => {
         throw new ForbiddenError('Нет прав на удаление этого фильма.');
       } else {
         return Movie.deleteOne({ _id: req.params.moviesId })
-          .then((data) => { res.status(201).send(data); });
+          .then((data) => { res.status(200).send(data); });
       }
     })
     .catch((err) => {

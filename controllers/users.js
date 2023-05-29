@@ -81,7 +81,7 @@ const editProfile = (req, res, next) => {
   User.findByIdAndUpdate(req.user._id, { name, email }, { new: true, runValidators: true })
     .then((user) => {
       if (!user) {
-        throw new NotFoundError(req.user._id);
+        throw new NotFoundError('Информация о пользователе не найдена.');
       }
       return res.send(user);
     })
@@ -89,6 +89,10 @@ const editProfile = (req, res, next) => {
       if (err.name === 'ValidationError') {
         next(
           new BadRequestError('Некорректные данные при редактировании профиля.')
+        );
+      } else if (err.code === 11000) {
+        next(
+          new ConflictError('Пользователь с таким email уже существует.')
         );
       } else {
         next(err);
